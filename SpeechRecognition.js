@@ -10,7 +10,7 @@
 	    	document.getElementById('unsupported').classList.remove('hidden');
         }else {
             var recognizer = new window.SpeechRecognition();
-            var transcription = document.getElementById("endereco");
+            var transcription = $("#endereco");
 
         	//Para o reconhecedor de voz, não parar de ouvir, mesmo que tenha pausas no usuario
         	recognizer.continuous = true
