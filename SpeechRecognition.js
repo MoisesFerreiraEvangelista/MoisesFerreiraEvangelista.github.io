@@ -18,13 +18,13 @@
         	recognizer.onresult = function(event){
         		transcription.val("");
         		for (var i = event.resultIndex; i < event.results.length; i++) {
-					transcription.val(event.results[i][0].transcript);
-
-        			if(event.results[i].isFinal){
-						$('form').submit();
-        			}
+					transcription.val(event.results[i][0].transcript);        			
         		}
-        	}
+			}
+			
+			recognizer.onaudioend  = function(){
+				$('form').submit();
+			}
 
         	document.querySelector("#rect").addEventListener("click",function(){
         		try {
