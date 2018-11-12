@@ -23,10 +23,10 @@
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVGhD7VhHaBRhGP1tGPQgiiLiyajY8GCC2DYJNlCxHmIvB/Ek5KIGC1hOCuIWUKygRrBEQTEHwRbLwcwmWGLBrgfFXITYsjMbnd/3DV+CmG/WmZidFZwHj13mf9/73jfzz+wkKkSIECFC6BI13C5S68FDYBXzkF2s1tEay/5dIOw88IEuUjoTSYOh5nLZvwN7vOpjR9RlKXQmYqBLVMs2uYVdooYg0EspqBfiBLzQEZXPdrmBnqZ6YYhHUkA/xDD15MW2wQNDnJSCtYfwqmDbYIGbdSya21IoItZ+gFfBPQ4j6jodk7RErNnYYoVsHxzQvPL3MC2krQKOZGkrMPxoZxsJNUSsnWZpMMBvQR6afhHD0I2fYb/jrPeG5pVL7Wd7hurO0uwDDYulIEQvvw8YZr5U63CSirAs+0DYpWKIiGrUpaoLy1yhC1U3nIxPkgeu9GKWZR9oVuYSop4lfwS0D108yliSfaDZCpcQb1jyR+CKvBU9itQylmQf2FojpBBEe6IazDJXoH6oVEtE/TCWBQOcOfG1BMdPsMQV0Ig/pDj+jCXBAduoXApDRKBNLGsD1G2RaoioW8+y4IBA/dDYkgIRsVaNp1gpmM8sdY4JWqLjVaL6sn2wQPMKKVS7GFHH2DZ40I2NK9MsBvNBnJC0l4dEVoEQB6VwfgiPfWyXO+AvvIEI0iQF9EJc0a/2FNWf7XILhNkqhfRC1G5mm9yD3lgR6LkUNBNxJZ8G+rbrBfi1ni6FzUQMP5XLc4/d9+2eiZr0+HjSWt6wpOCeFFhiw9KCu1RDtQfrdA+2Cw676nSvWNJaFDPMCgR5Ekua3/GpiQdufNBfZw8Qg/9K0uy/2eDUEMkDno/xeSxhWAupB7frWGitO8VrU9PRrAoDpFsCSLxw/KLWxZ3EARxi7XxFlVjbQqeHYV2MJlPTqDfH+DtEa62CeNK8JzV048MNq+UhwPryNWKNG3GV6hJJawzHaR9ihrUGQzRLDTJx3+2PunH+oDZDNC7Id9akmsw0mykLx/KHaE1qyq/73y/Pnrmm7ZLOrUPYxV105ZlqUeuFlCVRk5rM8bwDZ+CcZOiHye3lrYMYOzaKGl80rLMczzvihnlaNPPBhNGk36+apN+tjDjfJY0f4iFwiuN5R7wuHcEwlmToh0euvHYorfkissSM9ASO5w8wWIy9mWpjGjjNJnz+3b+JYnfMETC61dY8GGI73cDJ7Lh/SDivIbhvYPxNatiRdHoY5slYbXoct+94HK3WefFacxaeIHvRrIYvuxjIKzk4vKwEzv5M6sHtgsO2at01alijoklzDl4p1uI1ZieGO4xQlXiEX8DAV4jOdxyjNdKQ1qlBLXmwXYgQIUL8F1DqJ5jgpLTWuD9XAAAAAElFTkSuQmCC">
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Material icons -->
@@ -37,7 +37,7 @@
         #location-map {
             background: #fff;
             border: none;
-            height: 400px;
+            height: 600px;
             width: 100%;
 
             box-sizing: border-box;
@@ -52,65 +52,60 @@
 </head>
 
 <body>
-    <div class="panel-body" style="height: 100%;">
-        <div class="fixed-action-btn">
-            <button id="rect" type="button" class="btn-floating btn-large btn-default ">
-                <i class="material-icons">keyboard_voice</i>
-            </button>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Mapa Fácil</a>
+                  </div>
+                  
+                  <p id="coordenadas" class="navbar-text text-white"></p>
+                  
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <form class="navbar-form navbar-left">
+                      <div class="form-group ">
+                        <input type="text" class="form-control" id="endereco" type="text" placeholder="Informe o endereço" name="address">
+                      </div>
+                      <input type="submit" value="Localizar" class="btn btn-default btn-small">
+                      <input type="reset" value="Limpar" class="btn btn-default btn-small">
+                      <button id="meu-local" type="button" class="btn btn-default btn-small">
+                            Meu local
+                        </button>
+                    </form>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
+    <!-- <div class="navbar-fixed">
 
-        </div>
-        
-        <div class="row">
-            <div class="col s12 m12">
-                <div class="card blue-grey darken-1">
-                   
-                    <div class="card-content white-text">
-                            <span class="card-title">Mapa Fácil</span>
-                        
-                            <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">
-                                <!-- <div class="form-group"> -->
-                                    <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="">
-                                <!-- </div> -->
-                                <span id="unsupported" class="hidden">API not supported</span>
-
-                                <label class="white-text" id="coordenadas"></label>
-
-                            </form>
-                        
-                            <input type="submit" value="Localizar" class="btn btn-primary btn-small">
-                            <input type="reset" value="Limpar" class="btn btn-default btn-small">
-                            <!-- <input type="text" value="Meu local" id="meu-local" class="btn btn-default"> -->
-                            <button id="meu-local" type="button" class="btn btn-default btn-small">
-                                Meu local
-                            </button>
+            <nav>
+              <div class="nav-wrapper">
+                <a href="#!" class="brand-logo left">Mapa Fácil</a>
+                <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                      </ul>
+                <form>
+                        <div class="input-field">
+                          <input id="search" type="search" required>
+                          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                          <i class="material-icons">close</i>
                         </div>
-                        <div class="card-action">
-                        </div>
-                        <div class="card-content">
-                                <div id="location-map"></div>
-                    </div>
-                </div>
+                      </form>
             </div>
-        </div>
-        <!-- <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">
-            <div class="form-group">
-                <h4>Informe um endereço ou click no mapa</h4>
-                <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
-
-            </div>
-            <span id="unsupported" class="hidden">API not supported</span>
-
-            <input type="submit" value="Localizar" class="btn btn-primary btn-small">
-            <input type="reset" value="Limpar" class="btn btn-default btn-small">
-            <button id="meu-local" type="button" class="btn btn-default btn-small">
-                Meu local
-            </button>
-            <br>
-            <br>
-            <label id="coordenadas"></label>
-
-        </form> -->
-    </div>
+            </nav>
+          </div> -->
+ 
+        <div id="location-map"></div>
 
 
     <!-- <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">

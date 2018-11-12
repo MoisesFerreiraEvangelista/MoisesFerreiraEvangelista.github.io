@@ -24,8 +24,14 @@
         		}
 			}
 			
+			recognizer.onaudiostart  = function(){
+				// $('form').submit();
+				$(this).toggleClass('pulse red');
+			}
+
 			recognizer.onaudioend  = function(){
-				$('form').submit();
+				// $('form').submit();
+				$(this).toggleClass('pulse red');
 			}
 			
 
@@ -37,12 +43,12 @@
 		    //       }
 			// });
 
-			$(btn_falar).mouseup(function(){
-				$(this).toggleClass('pulse red');
-			});
-			$(btn_falar).mousedown(function(){
-				$(this).toggleClass('pulse red');
-			});
+			// $(btn_falar).mouseup(function(){
+			// 	$(this).toggleClass('pulse red');
+			// });
+			// $(btn_falar).mousedown(function(){
+			// 	$(this).toggleClass('pulse red');
+			// });
 			
 
         }
