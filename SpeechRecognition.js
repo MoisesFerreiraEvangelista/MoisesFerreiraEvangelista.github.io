@@ -10,7 +10,9 @@
 	    	document.getElementById('unsupported').classList.remove('hidden');
         }else {
             var recognizer = new window.SpeechRecognition();
-            var transcription = $("#endereco");
+			var transcription = $("#endereco");
+			var btn_falar = $("#rect");
+			
 
         	//Para o reconhecedor de voz, não parar de ouvir, mesmo que tenha pausas no usuario
         	recognizer.continuous = true
@@ -25,13 +27,23 @@
 			recognizer.onaudioend  = function(){
 				$('form').submit();
 			}
+			
 
-        	document.querySelector("#rect").addEventListener("click",function(){
-        		try {
-		            recognizer.start();
-		          } catch(ex) {
-		          	alert("error: " + ex.message);
-		          }
-        	});
+        	// document.querySelector("#rect").addEventListener("click",function(){
+        	// 	try {
+		    //         recognizer.start();
+		    //       } catch(ex) {
+		    //       	alert("error: " + ex.message);
+		    //       }
+			// });
+
+			$(btn_falar).mouseup(function(){
+				$(this).toggleClass('pulse red');
+			});
+			$(btn_falar).mousedown(function(){
+				$(this).toggleClass('pulse red');
+			});
+			
+
         }
 
