@@ -19,10 +19,10 @@
         		transcription.val("");
         		for (var i = event.resultIndex; i < event.results.length; i++) {
 					transcription.val(event.results[i][0].transcript);
-        			// if(event.results[i].isFinal){
-        			// }else{
-		            // 	transcription.textContent += event.results[i][0].transcript;
-        			// }
+
+        			if(event.results[i].isFinal){
+						$('form').submit();
+        			}
         		}
         	}
 
