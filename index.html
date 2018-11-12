@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mapa Fácil</title>
-  <!-- PWA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapa Fácil</title>
+    <!-- PWA -->
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,59 +14,95 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#0e2137">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-    crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+        crossorigin="" />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-    
-        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVGhD7VhHaBRhGP1tGPQgiiLiyajY8GCC2DYJNlCxHmIvB/Ek5KIGC1hOCuIWUKygRrBEQTEHwRbLwcwmWGLBrgfFXITYsjMbnd/3DV+CmG/WmZidFZwHj13mf9/73jfzz+wkKkSIECFC6BI13C5S68FDYBXzkF2s1tEay/5dIOw88IEuUjoTSYOh5nLZvwN7vOpjR9RlKXQmYqBLVMs2uYVdooYg0EspqBfiBLzQEZXPdrmBnqZ6YYhHUkA/xDD15MW2wQNDnJSCtYfwqmDbYIGbdSya21IoItZ+gFfBPQ4j6jodk7RErNnYYoVsHxzQvPL3MC2krQKOZGkrMPxoZxsJNUSsnWZpMMBvQR6afhHD0I2fYb/jrPeG5pVL7Wd7hurO0uwDDYulIEQvvw8YZr5U63CSirAs+0DYpWKIiGrUpaoLy1yhC1U3nIxPkgeu9GKWZR9oVuYSop4lfwS0D108yliSfaDZCpcQb1jyR+CKvBU9itQylmQf2FojpBBEe6IazDJXoH6oVEtE/TCWBQOcOfG1BMdPsMQV0Ig/pDj+jCXBAduoXApDRKBNLGsD1G2RaoioW8+y4IBA/dDYkgIRsVaNp1gpmM8sdY4JWqLjVaL6sn2wQPMKKVS7GFHH2DZ40I2NK9MsBvNBnJC0l4dEVoEQB6VwfgiPfWyXO+AvvIEI0iQF9EJc0a/2FNWf7XILhNkqhfRC1G5mm9yD3lgR6LkUNBNxJZ8G+rbrBfi1ni6FzUQMP5XLc4/d9+2eiZr0+HjSWt6wpOCeFFhiw9KCu1RDtQfrdA+2Cw676nSvWNJaFDPMCgR5Ekua3/GpiQdufNBfZw8Qg/9K0uy/2eDUEMkDno/xeSxhWAupB7frWGitO8VrU9PRrAoDpFsCSLxw/KLWxZ3EARxi7XxFlVjbQqeHYV2MJlPTqDfH+DtEa62CeNK8JzV048MNq+UhwPryNWKNG3GV6hJJawzHaR9ihrUGQzRLDTJx3+2PunH+oDZDNC7Id9akmsw0mykLx/KHaE1qyq/73y/Pnrmm7ZLOrUPYxV105ZlqUeuFlCVRk5rM8bwDZ+CcZOiHye3lrYMYOzaKGl80rLMczzvihnlaNPPBhNGk36+apN+tjDjfJY0f4iFwiuN5R7wuHcEwlmToh0euvHYorfkissSM9ASO5w8wWIy9mWpjGjjNJnz+3b+JYnfMETC61dY8GGI73cDJ7Lh/SDivIbhvYPxNatiRdHoY5slYbXoct+94HK3WefFacxaeIHvRrIYvuxjIKzk4vKwEzv5M6sHtgsO2at01alijoklzDl4p1uI1ZieGO4xQlXiEX8DAV4jOdxyjNdKQ1qlBLXmwXYgQIUL8F1DqJ5jgpLTWuD9XAAAAAElFTkSuQmCC">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVGhD7VhHaBRhGP1tGPQgiiLiyajY8GCC2DYJNlCxHmIvB/Ek5KIGC1hOCuIWUKygRrBEQTEHwRbLwcwmWGLBrgfFXITYsjMbnd/3DV+CmG/WmZidFZwHj13mf9/73jfzz+wkKkSIECFC6BI13C5S68FDYBXzkF2s1tEay/5dIOw88IEuUjoTSYOh5nLZvwN7vOpjR9RlKXQmYqBLVMs2uYVdooYg0EspqBfiBLzQEZXPdrmBnqZ6YYhHUkA/xDD15MW2wQNDnJSCtYfwqmDbYIGbdSya21IoItZ+gFfBPQ4j6jodk7RErNnYYoVsHxzQvPL3MC2krQKOZGkrMPxoZxsJNUSsnWZpMMBvQR6afhHD0I2fYb/jrPeG5pVL7Wd7hurO0uwDDYulIEQvvw8YZr5U63CSirAs+0DYpWKIiGrUpaoLy1yhC1U3nIxPkgeu9GKWZR9oVuYSop4lfwS0D108yliSfaDZCpcQb1jyR+CKvBU9itQylmQf2FojpBBEe6IazDJXoH6oVEtE/TCWBQOcOfG1BMdPsMQV0Ig/pDj+jCXBAduoXApDRKBNLGsD1G2RaoioW8+y4IBA/dDYkgIRsVaNp1gpmM8sdY4JWqLjVaL6sn2wQPMKKVS7GFHH2DZ40I2NK9MsBvNBnJC0l4dEVoEQB6VwfgiPfWyXO+AvvIEI0iQF9EJc0a/2FNWf7XILhNkqhfRC1G5mm9yD3lgR6LkUNBNxJZ8G+rbrBfi1ni6FzUQMP5XLc4/d9+2eiZr0+HjSWt6wpOCeFFhiw9KCu1RDtQfrdA+2Cw676nSvWNJaFDPMCgR5Ekua3/GpiQdufNBfZw8Qg/9K0uy/2eDUEMkDno/xeSxhWAupB7frWGitO8VrU9PRrAoDpFsCSLxw/KLWxZ3EARxi7XxFlVjbQqeHYV2MJlPTqDfH+DtEa62CeNK8JzV048MNq+UhwPryNWKNG3GV6hJJawzHaR9ihrUGQzRLDTJx3+2PunH+oDZDNC7Id9akmsw0mykLx/KHaE1qyq/73y/Pnrmm7ZLOrUPYxV105ZlqUeuFlCVRk5rM8bwDZ+CcZOiHye3lrYMYOzaKGl80rLMczzvihnlaNPPBhNGk36+apN+tjDjfJY0f4iFwiuN5R7wuHcEwlmToh0euvHYorfkissSM9ASO5w8wWIy9mWpjGjjNJnz+3b+JYnfMETC61dY8GGI73cDJ7Lh/SDivIbhvYPxNatiRdHoY5slYbXoct+94HK3WefFacxaeIHvRrIYvuxjIKzk4vKwEzv5M6sHtgsO2at01alijoklzDl4p1uI1ZieGO4xQlXiEX8DAV4jOdxyjNdKQ1qlBLXmwXYgQIUL8F1DqJ5jgpLTWuD9XAAAAAElFTkSuQmCC">
 
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
-  <style>
-    #location-map {
-      background: #fff;
-      border: none;
-      height: 755px;
-      width: 100%;
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Material icons -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-    }
+    <style>
+        #location-map {
+            background: #fff;
+            border: none;
+            height: 755px;
+            width: 100%;
 
-    .leaflet-control-zoom {
-      display: none;
-    }
-  </style>
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .leaflet-control-zoom {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="panel-body">
-    <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Informe um endereço ou click no mapa</label>
-        <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> -->
-        <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
+    <div class="panel-body">
+        <!-- <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li>
+                    <a class="btn-floating red">
+                        <i class="material-icons">insert_chart</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating yellow darken-1">
+                        <i class="material-icons">format_quote</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating green">
+                        <i class="material-icons">publish</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating blue">
+                        <i class="material-icons">attach_file</i>
+                    </a>
+                </li>
+            </ul>
+        </div> -->
+        <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">
+            <div class="form-group">
+                <h4>Informe um endereço ou click no mapa</h4>
+                <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> -->
+                <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
 
-      </div>
+            </div>
+            <button id="rect" type="button" class="btn btn-default">Gravar</button>
 
-      <input type="submit" value="Localizar" class="btn btn-primary">
-      <input type="reset" value="Limpar" class="btn btn-default">
-      <!-- <input type="text" value="Meu local" id="meu-local" class="btn btn-default"> -->
-      <button id="meu-local" type="button" class="btn btn-default">
-        Meu local
-      </button>
-      <br>
-      <br>
-      <label id="coordenadas"></label>
+            <input type="submit" value="Localizar" class="btn btn-primary">
+            <input type="reset" value="Limpar" class="btn btn-default">
+            <!-- <input type="text" value="Meu local" id="meu-local" class="btn btn-default"> -->
+            <button id="meu-local" type="button" class="btn btn-default">
+                Meu local
+            </button>
+            <br>
+            <br>
+            <label id="coordenadas"></label>
 
-    </form>
-  </div>
+        </form>
+    </div>
 
 
-  <!-- <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">
+    <!-- <form action="http://maps.googleapis.com/maps/api/geocode/json?" method="GET">
     <div class="form-group row">
       <div class="col-sm-9">
         <label for="">Informe um endereço ou click no mapa</label>
@@ -81,133 +117,150 @@
   </form> -->
 
 
-  <div id="location-map"></div>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
-    crossorigin="">
-    </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-
-  <script type="text/javascript">
-
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-
-    var latitudeInicial = -8.771930100073316;
-    var longitudeInicial = -63.88318061828614;
-    var map = L.map('location-map').setView([latitudeInicial, longitudeInicial], 15);
-    var mapLink = '<a href="https://openstreetmap.org">OpenStreetMap</a>';
-    L.tileLayer(
-      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; ' + mapLink,
-        maxZoom: 20
-      }).addTo(map);
-    var marker = L.marker([latitudeInicial, longitudeInicial]).addTo(map);
-    AtribuirEventoClick();
-
-
-    function Localizar(lat, lng) {
-
-      //console.log('Localizar ' + lat + ',' + lng);
-      map.remove();
-      map = L.map('location-map').setView([lat, lng], 17);
-      mapLink = '<a href="https://openstreetmap.org">OpenStreetMap</a>';
-      L.tileLayer(
-        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: 'Map data &copy; ' + mapLink,
-          maxZoom: 20,
-        }).addTo(map);
-      marker = L.marker([lat, lng]).addTo(map);
-
-      AtribuirEventoClick();
-    }
-
-    $('form').submit(function (e) {
-      e.preventDefault();
-      url = 'https://maps.googleapis.com/maps/api/geocode/json?' + $('form').serialize()+ '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';;
-      $('#coordenadas').text('Buscando endereço...');
-      AtualizarPara(url, true);
-    })
-
-    function AtribuirEventoClick() {
-      map.on('click', function (e) {
-        if (marker) {
-          map.removeLayer(marker);
-        }
-        marker = new L.Marker(e.latlng).addTo(map);
-
-        var latitude = e.latlng.lat;
-        var longitude = e.latlng.lng;
-
-        url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude+ '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
-
-
-        AtualizarPara(url);
-
-      });
-    };
-
-    function AtualizarPara(url, localizar) {
-      $('#coordenadas').text('Buscando endereço...').css("color", "initial");
-      $.get(url)
-        .done(function (data) {
-          console.log(data);
-          if (data.error_message) {
-            //console.log(data.error_message);
-            $('#coordenadas').text('Ops! Algo deu errado, refaça a operação').css("color", "crimson");
-          } else {
-            resultado = data.results[0];
-            endereco = resultado.formatted_address;
-            latitude = resultado.geometry.location.lat;
-            longitude = resultado.geometry.location.lng;
-            if (localizar) {
-              Localizar(latitude, longitude);
+    <div id="location-map"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var options = {
+                direction:'top',
+                hoverEnabled: false
             }
-            informacoes = "Endereço encontrado: " + endereco + " Latitude: " + latitude + " Longitude: " + longitude;
-            $('#coordenadas').text(informacoes).css("color", "darkblue");
-          }
+            var instances = M.FloatingActionButton.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+        crossorigin="">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         })
-        .fail(function (data) {
-          alert('Ops! Algo deu errado, refaça a operação');
-          $('#coordenadas').text('');
+
+        var latitudeInicial = -8.771930100073316;
+        var longitudeInicial = -63.88318061828614;
+        var map = L.map('location-map').setView([latitudeInicial, longitudeInicial], 15);
+        var mapLink = '<a href="https://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; ' + mapLink,
+                maxZoom: 20
+            }).addTo(map);
+        var marker = L.marker([latitudeInicial, longitudeInicial]).addTo(map);
+        AtribuirEventoClick();
+
+
+        function Localizar(lat, lng) {
+
+            //console.log('Localizar ' + lat + ',' + lng);
+            map.remove();
+            map = L.map('location-map').setView([lat, lng], 17);
+            mapLink = '<a href="https://openstreetmap.org">OpenStreetMap</a>';
+            L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: 'Map data &copy; ' + mapLink,
+                    maxZoom: 20,
+                }).addTo(map);
+            marker = L.marker([lat, lng]).addTo(map);
+
+            AtribuirEventoClick();
+        }
+
+        $('form').submit(function (e) {
+            e.preventDefault();
+            url = 'https://maps.googleapis.com/maps/api/geocode/json?' + $('form').serialize() + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';;
+            $('#coordenadas').text('Buscando endereço...');
+            AtualizarPara(url, true);
         })
-    }
 
-    $('#meu-local').click(function () {
+        function AtribuirEventoClick() {
+            map.on('click', function (e) {
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+                marker = new L.Marker(e.latlng).addTo(map);
 
-      //console.log('asd');
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) { // callback de sucesso
-          // ajusta a posição do marker para a localização do usuário
-          //marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-          //console.log('entrou em navigator.geolocation.getCurrentPosition')    ;      
-          //console.log(position);
-          var latitude = position.coords.latitude;
-          var longitude = position.coords.longitude;
+                var latitude = e.latlng.lat;
+                var longitude = e.latlng.lng;
 
-          url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
-          AtualizarPara(url, true);
+                url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
 
-        },
-          function (error) { // callback de erro
-            
-            //console.log('Erro ao obter localização.', error);
-          });
-      } else {
-        //console.log('Navegador não suporta Geolocalização!');
-        alert('Navegador não suporta Geolocalização!');
-      }
-    })
+
+                AtualizarPara(url);
+
+            });
+        };
+
+        function AtualizarPara(url, localizar) {
+            $('#coordenadas').text('Buscando endereço...').css("color", "initial");
+            $.get(url)
+                .done(function (data) {
+                    console.log(data);
+                    if (data.error_message) {
+                        //console.log(data.error_message);
+                        $('#coordenadas').text('Ops! Algo deu errado, refaça a operação').css("color", "crimson");
+                    } else {
+                        resultado = data.results[0];
+                        endereco = resultado.formatted_address;
+                        latitude = resultado.geometry.location.lat;
+                        longitude = resultado.geometry.location.lng;
+                        if (localizar) {
+                            Localizar(latitude, longitude);
+                        }
+                        informacoes = "Endereço encontrado: " + endereco + " Latitude: " + latitude + " Longitude: " + longitude;
+                        $('#coordenadas').text(informacoes).css("color", "darkblue");
+                    }
+                })
+                .fail(function (data) {
+                    alert('Ops! Algo deu errado, refaça a operação');
+                    $('#coordenadas').text('');
+                })
+        }
+
+        $('#meu-local').click(function () {
+
+            //console.log('asd');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) { // callback de sucesso
+                    // ajusta a posição do marker para a localização do usuário
+                    //marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+                    //console.log('entrou em navigator.geolocation.getCurrentPosition')    ;      
+                    //console.log(position);
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+
+                    url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
+                    AtualizarPara(url, true);
+
+                },
+                    function (error) { // callback de erro
+
+                        //console.log('Erro ao obter localização.', error);
+                    });
+            } else {
+                //console.log('Navegador não suporta Geolocalização!');
+                alert('Navegador não suporta Geolocalização!');
+            }
+        })
     // verifica se o navegador tem suporte a geolocalização
 
 
 
 
 
-  </script>
+    </script>
+    <script src="SpeechRecognition.js"></script>
 </body>
 </body>
 
