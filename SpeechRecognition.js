@@ -27,15 +27,15 @@
 			recognizer.onaudiostart  = function(){
 				
 				//$(this).toggleClass('pulse red');
-				$('#coordenadas').text('Ouvindo...');
+				$('#coordenadas').html('<i class="fa fa-spinner fa-spin"></i> Ouvindo...');
 			}
 
 			recognizer.onaudioend  = function(){
 				//$('form').submit();
 				//$(this).toggleClass('pulse red');
-				$('#coordenadas').text('Aguarde...');
+				$('#coordenadas').html('<i class="fa fa-spinner fa-spin"></i> Aguarde...');
 				setTimeout($('form').submit(), 8000);
-				$('#coordenadas').text('Buscando endereço...');
+				$('#coordenadas').html('<i class="fa fa-spinner fa-spin"></i> Buscando endereço...');
 			}
 
 			

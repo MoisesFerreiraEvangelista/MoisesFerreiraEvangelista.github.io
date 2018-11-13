@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mapa Fácil</title>
-    <!-- PWA -->
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- meta -->
     <meta name="msapplication-TileColor" content="#0e2137">
     <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- realfavicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package/favicon-16x16.png">
+    <link rel="mask-icon" href="/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
         crossorigin="" />
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css"> -->
     <link rel="stylesheet" href="/css/flatly/bootstrap.css">
 
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVGhD7VhHaBRhGP1tGPQgiiLiyajY8GCC2DYJNlCxHmIvB/Ek5KIGC1hOCuIWUKygRrBEQTEHwRbLwcwmWGLBrgfFXITYsjMbnd/3DV+CmG/WmZidFZwHj13mf9/73jfzz+wkKkSIECFC6BI13C5S68FDYBXzkF2s1tEay/5dIOw88IEuUjoTSYOh5nLZvwN7vOpjR9RlKXQmYqBLVMs2uYVdooYg0EspqBfiBLzQEZXPdrmBnqZ6YYhHUkA/xDD15MW2wQNDnJSCtYfwqmDbYIGbdSya21IoItZ+gFfBPQ4j6jodk7RErNnYYoVsHxzQvPL3MC2krQKOZGkrMPxoZxsJNUSsnWZpMMBvQR6afhHD0I2fYb/jrPeG5pVL7Wd7hurO0uwDDYulIEQvvw8YZr5U63CSirAs+0DYpWKIiGrUpaoLy1yhC1U3nIxPkgeu9GKWZR9oVuYSop4lfwS0D108yliSfaDZCpcQb1jyR+CKvBU9itQylmQf2FojpBBEe6IazDJXoH6oVEtE/TCWBQOcOfG1BMdPsMQV0Ig/pDj+jCXBAduoXApDRKBNLGsD1G2RaoioW8+y4IBA/dDYkgIRsVaNp1gpmM8sdY4JWqLjVaL6sn2wQPMKKVS7GFHH2DZ40I2NK9MsBvNBnJC0l4dEVoEQB6VwfgiPfWyXO+AvvIEI0iQF9EJc0a/2FNWf7XILhNkqhfRC1G5mm9yD3lgR6LkUNBNxJZ8G+rbrBfi1ni6FzUQMP5XLc4/d9+2eiZr0+HjSWt6wpOCeFFhiw9KCu1RDtQfrdA+2Cw676nSvWNJaFDPMCgR5Ekua3/GpiQdufNBfZw8Qg/9K0uy/2eDUEMkDno/xeSxhWAupB7frWGitO8VrU9PRrAoDpFsCSLxw/KLWxZ3EARxi7XxFlVjbQqeHYV2MJlPTqDfH+DtEa62CeNK8JzV048MNq+UhwPryNWKNG3GV6hJJawzHaR9ihrUGQzRLDTJx3+2PunH+oDZDNC7Id9akmsw0mykLx/KHaE1qyq/73y/Pnrmm7ZLOrUPYxV105ZlqUeuFlCVRk5rM8bwDZ+CcZOiHye3lrYMYOzaKGl80rLMczzvihnlaNPPBhNGk36+apN+tjDjfJY0f4iFwiuN5R7wuHcEwlmToh0euvHYorfkissSM9ASO5w8wWIy9mWpjGjjNJnz+3b+JYnfMETC61dY8GGI73cDJ7Lh/SDivIbhvYPxNatiRdHoY5slYbXoct+94HK3WefFacxaeIHvRrIYvuxjIKzk4vKwEzv5M6sHtgsO2at01alijoklzDl4p1uI1ZieGO4xQlXiEX8DAV4jOdxyjNdKQ1qlBLXmwXYgQIUL8F1DqJ5jgpLTWuD9XAAAAAElFTkSuQmCC">
-
-    <!-- Compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
-    <!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/app-images/images/icons/icon-512x512.png">
     <!-- Material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 
 
@@ -87,39 +87,40 @@
     </div> -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Mapa Fácil</a>                  
-            
-          </nav>
+        <a class="navbar-brand" href="#">Mapa Fácil</a>
+
+    </nav>
 
 
 
     <!-- <div class="visible-lg visible-md visible-sm"> -->
-        <div class="card ">
-            <div class="card-body">
-                <h5 class="text-muted ">Informe um endereço ou click no mapa</h5>
-                <form>
-                    <div class="form-group">
-                        <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
-                    </div>
-                    <!-- <input type="submit" value="Localizar" class="btn btn-primary"> -->
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-search"></i> Buscar</button>
-                    <!-- <input type="reset" value="Limpar" class="btn btn-primary"> -->
-                    <button type="reset" class="btn btn-default btn-sm">
-                        <i class="fa fa-eraser"></i> Limpar</button>
-                    <button id="meu-local" type="button" class="btn btn-success btn-sm">
-                        <i class="fa fa-street-view"></i> Meu local
-                    </button>
-                    <button id="rect" type="button" class="btn btn-primary btn-sm">
-                        <i class="fa fa-microphone"></i> Falar</button>
+    <div class="card ">
+        <div class="card-body">
+            <h5 class="text-muted ">Informe um endereço ou click no mapa</h5>
+            <form>
+                <div class="form-group">
+                    <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
+                </div>
+                <!-- <input type="submit" value="Localizar" class="btn btn-primary"> -->
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <i class="fa fa-search"></i> Buscar</button>
+                <!-- <input type="reset" value="Limpar" class="btn btn-primary"> -->
+                <button type="reset" class="btn btn-default btn-sm">
+                    <i class="fa fa-eraser"></i> Limpar</button>
+                <button id="meu-local" type="button" class="btn btn-success btn-sm">
+                    <i class="fa fa-street-view"></i> Meu local
+                </button>
+                <button id="rect" type="button" class="btn btn-primary btn-sm">
+                    <i class="fa fa-microphone"></i> Falar</button>
 
-                    <br>
-                    <br>
-                    <label id="coordenadas"></label>
-                </form>
-                <div id="location-map"></div>
-            </div>
+                <br>
+                <br>
+
+                <label id="coordenadas"></label>
+            </form>
+            <div id="location-map"></div>
         </div>
+    </div>
 
     <!-- </div> -->
 
@@ -140,6 +141,10 @@
         //     $('.fixed-action-btn').floatingActionButton();
         // });
     </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+        crossorigin="anonymous"></script>
+
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
@@ -186,7 +191,7 @@
         $('form').submit(function (e) {
             e.preventDefault();
             url = 'https://maps.googleapis.com/maps/api/geocode/json?' + $(this).serialize() + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
-            $('#coordenadas').text('Buscando endereço...');
+            $('#coordenadas').html('<i class="fa fa-spinner fa-spin"></i> Buscando endereço...');
             AtualizarPara(url, true);
         })
 
@@ -208,7 +213,7 @@
         };
 
         function AtualizarPara(url, localizar) {
-            $('#coordenadas').text('Buscando endereço...').css("color", "initial");
+            $('#coordenadas').html('<i class="fa fa-spinner fa-spin"></i> Buscando endereço...').css("color", "initial");
             $.get(url)
                 .done(function (data) {
                     console.log(data);
@@ -261,6 +266,8 @@
     // verifica se o navegador tem suporte a geolocalização
     </script>
     <script src="SpeechRecognition.js"></script>
+    <!-- Uncomment the line below when ready to test with fake data -->
+    <script src="js/app.js" async></script>
 </body>
 </body>
 
