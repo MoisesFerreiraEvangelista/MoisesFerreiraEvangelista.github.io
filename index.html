@@ -16,9 +16,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
         crossorigin="" />
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css"> -->
+    <link rel="stylesheet" href="/css/flatly/bootstrap.css">
 
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVGhD7VhHaBRhGP1tGPQgiiLiyajY8GCC2DYJNlCxHmIvB/Ek5KIGC1hOCuIWUKygRrBEQTEHwRbLwcwmWGLBrgfFXITYsjMbnd/3DV+CmG/WmZidFZwHj13mf9/73jfzz+wkKkSIECFC6BI13C5S68FDYBXzkF2s1tEay/5dIOw88IEuUjoTSYOh5nLZvwN7vOpjR9RlKXQmYqBLVMs2uYVdooYg0EspqBfiBLzQEZXPdrmBnqZ6YYhHUkA/xDD15MW2wQNDnJSCtYfwqmDbYIGbdSya21IoItZ+gFfBPQ4j6jodk7RErNnYYoVsHxzQvPL3MC2krQKOZGkrMPxoZxsJNUSsnWZpMMBvQR6afhHD0I2fYb/jrPeG5pVL7Wd7hurO0uwDDYulIEQvvw8YZr5U63CSirAs+0DYpWKIiGrUpaoLy1yhC1U3nIxPkgeu9GKWZR9oVuYSop4lfwS0D108yliSfaDZCpcQb1jyR+CKvBU9itQylmQf2FojpBBEe6IazDJXoH6oVEtE/TCWBQOcOfG1BMdPsMQV0Ig/pDj+jCXBAduoXApDRKBNLGsD1G2RaoioW8+y4IBA/dDYkgIRsVaNp1gpmM8sdY4JWqLjVaL6sn2wQPMKKVS7GFHH2DZ40I2NK9MsBvNBnJC0l4dEVoEQB6VwfgiPfWyXO+AvvIEI0iQF9EJc0a/2FNWf7XILhNkqhfRC1G5mm9yD3lgR6LkUNBNxJZ8G+rbrBfi1ni6FzUQMP5XLc4/d9+2eiZr0+HjSWt6wpOCeFFhiw9KCu1RDtQfrdA+2Cw676nSvWNJaFDPMCgR5Ekua3/GpiQdufNBfZw8Qg/9K0uy/2eDUEMkDno/xeSxhWAupB7frWGitO8VrU9PRrAoDpFsCSLxw/KLWxZ3EARxi7XxFlVjbQqeHYV2MJlPTqDfH+DtEa62CeNK8JzV048MNq+UhwPryNWKNG3GV6hJJawzHaR9ihrUGQzRLDTJx3+2PunH+oDZDNC7Id9akmsw0mykLx/KHaE1qyq/73y/Pnrmm7ZLOrUPYxV105ZlqUeuFlCVRk5rM8bwDZ+CcZOiHye3lrYMYOzaKGl80rLMczzvihnlaNPPBhNGk36+apN+tjDjfJY0f4iFwiuN5R7wuHcEwlmToh0euvHYorfkissSM9ASO5w8wWIy9mWpjGjjNJnz+3b+JYnfMETC61dY8GGI73cDJ7Lh/SDivIbhvYPxNatiRdHoY5slYbXoct+94HK3WefFacxaeIHvRrIYvuxjIKzk4vKwEzv5M6sHtgsO2at01alijoklzDl4p1uI1ZieGO4xQlXiEX8DAV4jOdxyjNdKQ1qlBLXmwXYgQIUL8F1DqJ5jgpLTWuD9XAAAAAElFTkSuQmCC">
 
@@ -31,6 +31,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 
 
     <style>
@@ -54,65 +56,75 @@
 <body>
     <!-- <div class="visible-xs">
         <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Mapa Fácil</a>
-                  </div>
-                  <p id="coordenadas" class="navbar-text text-white navbar-right"></p>
-                  
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    
+                </div>
+                <p id="coordenadas" class="navbar-text text-white navbar-right"></p>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                     <form class="navbar-form navbar-left">
-                      <div class="form-group ">
-                        <input type="text" required class="form-control" id="endereco" type="text" placeholder="Informe o endereço" name="address">
-                      </div>
-                      <input type="submit" value="Localizar" class="btn btn-default btn-small">
-                      <input type="reset" value="Limpar" class="btn btn-default btn-small">
-                      <button id="meu-local" type="button" class="btn btn-default btn-small">
+                        <div class="form-group ">
+                            <input type="text" required class="form-control" id="endereco" type="text" placeholder="Informe o endereço" name="address">
+                        </div>
+                        <input type="submit" value="Localizar" class="btn btn-default btn-small">
+                        <input type="reset" value="Limpar" class="btn btn-default btn-small">
+                        <button id="meu-local" type="button" class="btn btn-default btn-small">
                             Meu local
                         </button>
                     </form>
-                  </div>
                 </div>
-              </nav>
-            </div> -->
-
- 
-            
-            <div class="visible-lg visible-md visible-sm">                    
-                
             </div>
-                    <div class="panel-body">
-                      <form >
-                          <div class="">
-                              <div class="form-group">
-    
-                                  <h4>Informe um endereço ou click no mapa</h4>
-                                  <input  id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
-                                </div>
-                                  <input type="submit" value="Localizar" class="btn btn-primary">
-                                  <input type="reset" value="Limpar" class="btn btn-primary">
-                                  <button id="meu-local" type="button" class="btn btn-default btn-small">
-                                          Meu local
-                                      </button>
-                                      <button id="rect" type="button" class="btn btn-default">Falar</button>
-                                      <br>
-                                      <br>
-                                  <label id="coordenadas"></label>
-                              
-                          </div>
-                      </form> 
-                    </div>
+        </nav>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Mapa Fácil</a>                  
             
-            <div id="location-map"></div>
+          </nav>
+
+
+
+    <!-- <div class="visible-lg visible-md visible-sm"> -->
+        <div class="card ">
+            <div class="card-body">
+                <h5 class="text-muted ">Informe um endereço ou click no mapa</h5>
+                <form>
+                    <div class="form-group">
+                        <input id="endereco" type="text" placeholder="Informe o endereço" name="address" class="form-control form-control-success">
+                    </div>
+                    <!-- <input type="submit" value="Localizar" class="btn btn-primary"> -->
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-search"></i> Buscar</button>
+                    <!-- <input type="reset" value="Limpar" class="btn btn-primary"> -->
+                    <button type="reset" class="btn btn-default btn-sm">
+                        <i class="fa fa-eraser"></i> Limpar</button>
+                    <button id="meu-local" type="button" class="btn btn-success btn-sm">
+                        <i class="fa fa-street-view"></i> Meu local
+                    </button>
+                    <button id="rect" type="button" class="btn btn-primary btn-sm">
+                        <i class="fa fa-microphone"></i> Falar</button>
+
+                    <br>
+                    <br>
+                    <label id="coordenadas"></label>
+                </form>
+                <div id="location-map"></div>
+            </div>
+        </div>
+
+    <!-- </div> -->
+
     <script>
-        
+
         // document.addEventListener('DOMContentLoaded', function () {
         //     var elems = document.querySelectorAll('.fixed-action-btn');
         //     var options = {
@@ -190,7 +202,6 @@
 
                 url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
 
-
                 AtualizarPara(url);
 
             });
@@ -214,7 +225,7 @@
                         }
                         informacoes = "Endereço encontrado: " + endereco + " Latitude: " + latitude + " Longitude: " + longitude;
                         $('#coordenadas').text(informacoes).css("color", "darkblue");
-                        $('#bs-example-navbar-collapse-1').collapse('toggle');
+                        // $('#bs-example-navbar-collapse-1').collapse('toggle');
                     }
                 })
                 .fail(function (data) {
@@ -237,7 +248,6 @@
 
                     url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
                     AtualizarPara(url, true);
-
                 },
                     function (error) { // callback de erro
 
@@ -249,11 +259,6 @@
             }
         })
     // verifica se o navegador tem suporte a geolocalização
-
-
-
-
-
     </script>
     <script src="SpeechRecognition.js"></script>
 </body>
