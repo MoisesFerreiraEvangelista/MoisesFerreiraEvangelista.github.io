@@ -213,7 +213,7 @@
 
         $('form').submit(function (e) {
             e.preventDefault();
-            url = 'https://maps.googleapis.com/maps/api/geocode/json?' + $(this).serialize() + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
+            url = 'https://maps.googleapis.com/maps/api/geocode/json?' + $(this).serialize() + '&key=AIzaSyA1fbIyTXHRaQkA-WQgdfrmE4MCesoqEXI';
             $('#coordenadas').html('<i class="fa fa-spinner fa-spin"></i> Buscando endereço...');
             AtualizarPara(url, true);
         })
@@ -228,7 +228,7 @@
                 var latitude = e.latlng.lat;
                 var longitude = e.latlng.lng;
 
-                url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
+                url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyA1fbIyTXHRaQkA-WQgdfrmE4MCesoqEXI';
 
                 AtualizarPara(url);
 
@@ -274,7 +274,7 @@
                     var latitude = position.coords.latitude;
                     var longitude = position.coords.longitude;
 
-                    url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyDxpQW1eEg-gdgxl5VCWXFbV2xpigiWUIY';
+                    url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ', ' + longitude + '&key=AIzaSyA1fbIyTXHRaQkA-WQgdfrmE4MCesoqEXI';
                     AtualizarPara(url, true);
                 },
                     function (error) { // callback de erro
