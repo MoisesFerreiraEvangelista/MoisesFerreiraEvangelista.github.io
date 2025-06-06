@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
         crossorigin="" />
-    <link rel="stylesheet" href="/css/flatly/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
 
     <link rel="shortcut icon" href="/app-images/images/icons/icon-512x512.png">
     <!-- Material icons -->
@@ -54,46 +54,10 @@
 </head>
 
 <body>
-    <!-- <div class="visible-xs">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Mapa Fácil</a>
-                </div>
-                <p id="coordenadas" class="navbar-text text-white navbar-right"></p>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                    <form class="navbar-form navbar-left">
-                        <div class="form-group ">
-                            <input type="text" required class="form-control" id="endereco" type="text" placeholder="Informe o endereço" name="address">
-                        </div>
-                        <input type="submit" value="Localizar" class="btn btn-default btn-small">
-                        <input type="reset" value="Limpar" class="btn btn-default btn-small">
-                        <button id="meu-local" type="button" class="btn btn-default btn-small">
-                            Meu local
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </div> -->
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Mapa Fácil</a>
-
     </nav>
 
-
-
-    <!-- <div class="visible-lg visible-md visible-sm"> -->
     <div class="card ">
         <div class="card-body">
             <h5 class="text-muted ">Informe um endereço ou click no mapa</h5>
@@ -121,8 +85,6 @@
             <div id="location-map"></div>
         </div>
     </div>
-
-    <!-- </div> -->
     <!--Start of Tawk.to Script-->
         <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -147,23 +109,19 @@
     </script>
 
 
-    <script>
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     var elems = document.querySelectorAll('.fixed-action-btn');
-        //     var options = {
-        //         direction: 'top',
-        //         hoverEnabled: false
-        //     }
-        //     var instances = M.FloatingActionButton.init(elems, options);
-        // });
-
-        // Or with jQuery
-
-        // $(document).ready(function () {
-        //     $('.fixed-action-btn').floatingActionButton();
-        // });
-    </script>
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(function (registration) {
+                    console.log('Service Worker registrado com sucesso:', registration);
+                })
+                .catch(function (error) {
+                    console.log('Erro ao registrar o Service Worker:', error);
+                });
+        } else {
+            console.log('Este navegador não suporta Service Workers.');
+        }
+    </script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
         crossorigin="anonymous"></script>
 
